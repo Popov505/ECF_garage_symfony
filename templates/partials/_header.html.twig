@@ -1,0 +1,19 @@
+<header>
+  <!-- Connexion page -->
+  <a class="link" href="{{ path('app_admin') }}">Accès employés</a>
+  
+  <!-- Logo and return to home page -->
+  <a href="{{ path('app_home') }}">
+    <img class="logoGarage" src={{ asset('images/logo/logoGarage.svg')}} alt="Logo du garage de Vincent Parrot"/>
+  </a>
+
+  <!-- Navigation to the main sections of the website -->
+  <nav>
+    <ul> 
+      <li><a class="link" href="{{ path('app_home') }}">Réparation carrosserie</a></li>
+      <li><a class="link" href="{{ path('app_home') }}">Réparation mécanique</a></li>
+      <li><a class="link" href="{{ path('app_home') }}">Entretien</a></li>
+      <li><a class="link" href="{{ path('app_cars') }}">Véhicules d'occasion</a></li>
+    </ul>
+  </nav>
+</header>
