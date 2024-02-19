@@ -13,26 +13,38 @@ use Symfony\Component\Routing\Attribute\Route;
 class PrestationsController extends AbstractController
 {
     #[Route('/', name: 'app_home')]
-    public function show(PrestationsRepository $prestationsRepository): Response
+    public function showHome(PrestationsRepository $prestationsRepository): Response
     {
-        $prestations = $prestationsRepository->findBy([],['id' => 'ASC']);
-        
+        $prestationList = $prestationsRepository->findBy([],['id' => 'ASC']);
+
         return $this->render('home/index.html.twig', [
-            'prestations' => $prestations,
+            'prestationList' => $prestationList,
         ]);
     }
 
 
     #[Route('/prestations/{id}', name: 'app_show_prestations')]
-    public function index(Prestations $prestations, CarsRepository $carsRepository): Response
+    public function showPrestations(PrestationsRepository $prestationsRepository, Prestations $prestation, CarsRepository $carsRepository): Response
     {
         $cars = $carsRepository->findBy([],['id' => 'ASC']);
+        $prestationList = $prestationsRepository->findBy([],['id' => 'ASC']);
+
+        dump($prestationList, $prestation);
 
         return $this->render('prestations/show_prestations.html.twig', [
             'cars' => $cars,
-            'prestations' => $prestations,
+            'prestation' => $prestation,
+            'prestationList' => $prestationList,
         ]);
     }
 
+    #[Route('/test', name: 'app_test')]
+    public function test(PrestationsRepository $prestationsRepository): Response
+    {
+        $prestationList = $prestationsRepository->findBy([],['id' => 'ASC']);
 
+        return $this->render('opening_hours/test.html.twig', [
+            'prestationList' => $prestationList,
+        ]);
+    }
 }

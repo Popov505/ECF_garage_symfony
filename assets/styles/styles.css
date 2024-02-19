@@ -177,13 +177,14 @@ a {
     background-color: #F2F2F2FF;
 }
 
+/* article dimensions */
 article {
-    /* article dimensions */
     height: fit-content;
     width: auto;   
     margin: 0 5px;
     padding: 5px;
 }
+
 
 img {
     width: 100%;
@@ -208,6 +209,7 @@ input {
     background-color: #F2F2F2FF;
     color: #262526FF;
 }
+
 .index_services_div {
     /* services arrangement */
     display: flex;
@@ -215,6 +217,7 @@ input {
     align-items: center;
     justify-content: space-evenly;
 }
+
 .index_service {
     /* section dimensions */
     height: 20rem;
@@ -230,24 +233,23 @@ input {
 }
 /* Index - END */
 
-/* Car-body & Mecanic & Maintenance - START */
-.car-body_article, .mecanic_article, .maintenance_article, .prestation_article {
+/* Car-body & Mecanic & Maintenance & Sale presentation articles - START */
+.prestation_article {
+    background-color: #F2F2F2FF;
+    color: #262526FF;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.car-body_article_text, .car-body_article_image, 
-.mecanic_article_text, .mecanic_article_image,
-.maintenance_article_text, .maintenance_article_image,
-.prestation_article_text {
+.prestation_article_text, .prestation_article_image {
     width: 40%;
     height: auto;
     text-align: center;
 }
 
-/* Car-body & Mecanic & Maintenance - END */
+/* Car-body & Mecanic & Maintenance & Sale presentation articles - END */
 
 
 /* Sale - START */
@@ -256,6 +258,11 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.sale_article_title {
+    background-color: #262526FF;
+    width: 100%;
 }
 
 .sale_article_filters {
@@ -289,13 +296,15 @@ input {
     align-items: center;
     justify-content: space-evenly;
 }
-article>section>article {
+
+.sale_article_car {
     background-color: #262526FF;
     color: #F2F2F2FF;
     width: 20%;
     height: auto ;
     margin: 1rem 0;
 }
+
 
 .sale_navigation_div {
     background-color: #262526FF;
