@@ -23,12 +23,12 @@ class PrestationsController extends AbstractController
     }
 
 
-    #[Route('/prestations/{id}', name: 'app_prestation')]
+    #[Route('/prestations/{id}', name: 'app_show_prestations')]
     public function index(Prestations $prestations, CarsRepository $carsRepository): Response
     {
         $cars = $carsRepository->findBy([],['id' => 'ASC']);
 
-        return $this->render('prestations/index.html.twig', [
+        return $this->render('prestations/show_prestations.html.twig', [
             'cars' => $cars,
             'prestations' => $prestations,
         ]);

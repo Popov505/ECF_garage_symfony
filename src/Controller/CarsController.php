@@ -10,12 +10,12 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class CarsController extends AbstractController
 {
-    #[Route('/cars', name: 'app_cars')]
-    public function index(CarsRepository $carsRepository): Response
+    #[Route('/show_cars', name: 'app_show_cars')]
+    public function showCars(CarsRepository $carsRepository): Response
     {
         $cars = $carsRepository->findBy([],['id' => 'ASC']);
     
-        return $this->render('cars/index.html.twig', [
+        return $this->render('cars/show_cars.html.twig', [
             'cars' => $cars,
         ]);
     }

@@ -1,10 +1,11 @@
 <!-- Car -->
 <article class="sale_article_car">
-{% if car.imageName %}
-  <img src="{{ vich_uploader_asset(car, 'imageFile') }}" alt="Photo of the car for sale : {{ car.title }}">
-{% else %}
-  <img src="{{ asset('images/logo/logoGarage.svg') }}" alt="Photo of the car for sale : {{ car.title }}">
-{% endif %}
+
+  {% if car.imageName %}
+    <img src="{{ vich_uploader_asset(car, 'imageFile') }}" alt="Photo of the car for sale : {{ car.title }}">
+  {% else %}
+    <img src="{{ asset('images/logo/logoGarage.svg') }}" alt="Photo of the car for sale : {{ car.title }}">
+  {% endif %}
   
   <div>
     <h3>{{ car.title }}</h3>
