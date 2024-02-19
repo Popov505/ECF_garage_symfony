@@ -14,9 +14,9 @@
     <div class="openingHours"> 
       <ul>
         <h2>Horaires d'ouverture</h2>
-        <li>Lundi-Vendredi : 8h45-12h00 | 14h00-18h00</li>
-        <li>Samedi: 8h45-12h00</li>
-        <li>Dimanche: fermé</li>
+        {% for openingHour in openingHourList %}
+          <li>{{ openingHour.openDay }} {{ openingHour.openHour }}</li>
+        {% endfor %}
       </ul>
     </div>
   </section>

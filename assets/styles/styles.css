@@ -68,7 +68,7 @@ body {
 header {
     /* Header dimensions */
     height: fit-content;
-    width: auto;   
+    width: 100%;   
     margin: 0 5px;
     padding: 5px;
 
@@ -184,7 +184,6 @@ article {
     margin: 0 5px;
     padding: 5px;
 }
-
 
 img {
     width: 100%;
@@ -369,3 +368,36 @@ a:hover, .link, #footer_courtesy {
     cursor: pointer;
 }
 /* Dynamic styles - END */
+
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    /* Hide the navigation menu in the header */
+    .header_navigation {
+        visibility: collapse;
+    }
+
+    /* Home page */
+    .index_services_div{
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+    .index_service {
+        height: 20rem;
+        width: 20rem;
+    }
+    
+    /* Sale page */
+    .sale_article_car {
+        width: 20rem;
+    }
+
+    .sale_filters_div {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .sale_filters_kilometer, .sale_filters_price, .sale_filters_year {
+        width: auto;
+    }
+}
